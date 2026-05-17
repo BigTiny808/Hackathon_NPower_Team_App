@@ -48,6 +48,16 @@
       }
     ];
 
+    const jumpScare = document.getElementById("jumpScare");
+
+    function triggerJumpScare() {
+  jumpScare.classList.add("show");
+
+  setTimeout(() => {
+    jumpScare.classList.remove("show");
+  }, 1200);
+}
+
     const modifiers = [-12, -8, -5, 5, 8, 12];
 
     const storyDisplay = document.getElementById("storyDisplay");
@@ -233,6 +243,10 @@
       const stats = calculateStats();
       const rank = getRank(stats.wpm, stats.accuracy);
       const playerWon = winner === "player";
+      
+      if (playerWon) {
+  triggerJumpScare();
+}
       setComment(playerWon ? "win" : "lose");
       terminalStatus.textContent = playerWon ? "STATUS: BREACH COMPLETE" : "STATUS: COUNTER-BREACHED";
 

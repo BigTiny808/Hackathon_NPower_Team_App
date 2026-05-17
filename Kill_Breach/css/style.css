@@ -474,3 +474,61 @@
       .app { display: none; }
       .mobile-block { display: block; }
     }
+
+    .jump-scare {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: red;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  animation: jumpFlash 0.18s infinite;
+}
+
+.jump-scare.show {
+  display: flex;
+}
+
+.jump-face {
+  font-size: 180px;
+  text-shadow: 0 0 40px red;
+  animation: jumpZoom 0.35s ease-out forwards;
+}
+
+.jump-text {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-shadow: 0 0 20px red;
+}
+
+@keyframes jumpZoom {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+@keyframes jumpFlash {
+  0% {
+    background: black;
+  }
+
+  50% {
+    background: #300000;
+  }
+
+  100% {
+    background: black;
+  }
+}
