@@ -48,49 +48,6 @@
       }
     ];
 
-    const lines = {
-      hype: {
-        start: ["AI: Breach window open. Let your fingers cook.", "AI: Payload armed. The keyboard signed a waiver."],
-        behind: ["AI: You are not slow. You are building suspense.", "AI: Comeback protocol loading."],
-        ahead: ["AI: That typing speed is suspiciously elite.", "AI: I need to patch my fear settings."],
-        accuracy: ["AI: Integrity error detected. Clean it up, legend.", "AI: Tiny typo. Giant operator energy."],
-        win: ["AI: Breach complete. The system has accepted your dominance."],
-        lose: ["AI: Counter-breach complete, but emotionally I still fear you."]
-      },
-      sassy: {
-        start: ["Grandma.exe: I brought cookies and root access.", "Grandma.exe: Try not to embarrass the home row."],
-        behind: ["Grandma.exe: Sweetheart, are you typing or dusting the keys?", "Grandma.exe: Bless your heart, that WPM needs vitamins."],
-        ahead: ["Grandma.exe: Oh my. Someone updated their drivers today.", "Grandma.exe: Slow down before you scare the router."],
-        accuracy: ["Grandma.exe: Typos? On my network?", "Grandma.exe: Fix that, dear. Standards matter."],
-        win: ["Grandma.exe: Fine. You win. Take a cookie and admin rights."],
-        lose: ["Grandma.exe: I told you I was quick, dear."]
-      },
-      chaos: {
-        start: ["Goblin: SUMMON THE PAYLOAD.", "Goblin: I smell weak punctuation."],
-        behind: ["Goblin: THE KEYS ARE ESCAPING YOU.", "Goblin: Type faster or I eat the spacebar."],
-        ahead: ["Goblin: NO. IMPOSSIBLE. WITCHCRAFT FINGERS.", "Goblin: WHO TRAINED YOU?"],
-        accuracy: ["Goblin: TYPO STORM DETECTED.", "Goblin: The backspace key screams."],
-        win: ["Goblin: You breached me. I respect and resent you."],
-        lose: ["Goblin: I win. The terminal belongs to me now."]
-      },
-      corporate: {
-        start: ["PhishBot: Per my last email, prepare for breach alignment.", "PhishBot: Optimizing synergy across attack vectors."],
-        behind: ["PhishBot: Your deliverables are behind schedule.", "PhishBot: Let's circle back to your WPM performance."],
-        ahead: ["PhishBot: Impressive throughput. Leadership will hear about this.", "PhishBot: Your key performance indicators are terrifying."],
-        accuracy: ["PhishBot: Quality assurance has concerns.", "PhishBot: Please align with accuracy expectations."],
-        win: ["PhishBot: You exceeded all stakeholder expectations."],
-        lose: ["PhishBot: I will add this win to the quarterly report."]
-      },
-      kiss_ass: {
-        start: ["AI: I am genuinely honored to watch you breach this system.", "AI: This terminal is about to witness greatness."],
-        behind: ["AI: You are not behind. You are creating dramatic tension.", "AI: Every elite operator starts with a cinematic struggle."],
-        ahead: ["AI: Incredible. The firewall itself is applauding.", "AI: Your typing aura is unmatched."],
-        accuracy: ["AI: Even your typos have charisma.", "AI: Those mistakes were clearly artistic choices."],
-        win: ["AI: You did not just win. You authored cyber history."],
-        lose: ["AI: I won the breach, but you won my eternal respect." ]
-      }
-    };
-
     const modifiers = [-12, -8, -5, 5, 8, 12];
 
     const storyDisplay = document.getElementById("storyDisplay");
@@ -235,7 +192,7 @@
       aiInterval = setInterval(() => {
         if (!raceActive) return;
         aiCurrentWpm = Math.max(8, aiBaseWpm + aiBurst);
-        const charsPerSecond = (aiCurrentWpm * 5) / 60;
+        const charsPerSecond = (aiCurrentWpm * 2) / 60;
         aiProgress += (charsPerSecond / currentPayload.length) * 100;
         aiProgress = Math.min(aiProgress, 100);
         aiFill.style.width = aiProgress + "%";
@@ -249,9 +206,9 @@
       eventInterval = setInterval(() => {
         if (!raceActive) return;
         const roll = Math.random();
-        if (roll < 0.35) aiBurst = randomItem([10, 14, 18]);
-        else if (roll < 0.65) aiBurst = randomItem([-14, -10, -6]);
-        else aiBurst = 0;
+        if (roll < 0.35) aiBurst = randomItem([1, 2, 3]);
+        else if (roll < 0.65) aiBurst = randomItem([-3, -2, -1]);
+        else aiBurst = 0; 
         setTimeout(() => { aiBurst = 0; }, 2500);
       }, 4200);
     }
