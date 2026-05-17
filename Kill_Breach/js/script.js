@@ -16,35 +16,35 @@
         avatar: "👁️",
         desc: "A shadow AI that adapts its counter-breach speed to your typing rhythm.",
         style: "hype",
-        base: 42
+        base: 20
       },
       {
         name: "Grandma.exe",
         avatar: "👵",
         desc: "Sweet, terrifying, and somehow already inside your firewall.",
         style: "sassy",
-        base: 38
+        base: 20
       },
       {
         name: "Packet Goblin",
         avatar: "👹",
         desc: "Chaotic malware gremlin powered by stolen backspace keys.",
         style: "chaos",
-        base: 45
+        base: 22
       },
       {
         name: "Corporate PhishBot",
         avatar: "📎",
         desc: "Weaponized office jargon with suspicious attachment energy.",
         style: "corporate",
-        base: 36
+        base: 21
       },
       {
         name: "Sudo Simp",
         avatar: "🏆",
         desc: "A shameless hype engine convinced you are the chosen sysadmin.",
-        style: "kissass",
-        base: 40
+        style: "kiss_ass",
+        base: 29
       }
     ];
 
@@ -81,7 +81,7 @@
         win: ["PhishBot: You exceeded all stakeholder expectations."],
         lose: ["PhishBot: I will add this win to the quarterly report."]
       },
-      kissass: {
+      kiss_ass: {
         start: ["AI: I am genuinely honored to watch you breach this system.", "AI: This terminal is about to witness greatness."],
         behind: ["AI: You are not behind. You are creating dramatic tension.", "AI: Every elite operator starts with a cinematic struggle."],
         ahead: ["AI: Incredible. The firewall itself is applauding.", "AI: Your typing aura is unmatched."],
