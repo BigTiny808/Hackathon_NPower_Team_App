@@ -1,5 +1,5 @@
 
-    const payloads = [
+     const payloads = [
       "Override the firewall handshake before the rogue coffee machine leaks the admin password to the printer.",
       "Decrypt the raccoon CEO's emergency memo before the quarterly nacho budget gets uploaded to the dark web.",
       "Patch the moon cafe server before zero gravity foam crashes the orbital payment gateway.",
